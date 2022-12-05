@@ -1,12 +1,11 @@
 import random
 def inputlistN(inputlistN):
-    boolean = True
-    while boolean:
+    while True:
         try:
             ListN = int(input(F'{inputlistN}'))
             ListN = list(range(1,ListN+1))
             random.shuffle(ListN)
-            boolean = False
+            return ListN
         except ValueError:
             print('Нужно ввести число!')
     return ListN
@@ -19,6 +18,6 @@ def prod(N):
     for i in range(list1):
         result = N[i]*N[len(N)-i-1] 
         list_var.append(result)
-    print(F'список: {N}\nПроизведение пар: ,{list_var}')
+    print('список: ',N,'\nПроизведение пар: ',list_var)
 N = inputlistN('Введите число N: ')
 prod(N)
