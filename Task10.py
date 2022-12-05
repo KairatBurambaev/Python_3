@@ -8,7 +8,6 @@ def inputlistN(inputlistN):
             return ListN
         except ValueError:
             print('Нужно ввести число!')
-    return ListN
 N = inputlistN('Введите число N: ')
 result = 0
 for i in N:

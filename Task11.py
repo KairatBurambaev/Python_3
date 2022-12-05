@@ -8,7 +8,6 @@ def inputlistN(inputlistN):
             return ListN
         except ValueError:
             print('Нужно ввести число!')
-    return ListN
 list_var = []
 def prod(N):
     if len(N) % 2 != 0:
