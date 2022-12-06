@@ -19,5 +19,3 @@ result =''
 for elem in ist:
     result = result + str(elem)
 print(result)
-
-    
