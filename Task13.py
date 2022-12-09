@@ -14,8 +14,7 @@ while N > 0:
     else:
         ist.append(1)
         N = N//2
-ist.reverse()
 result =''
 for elem in ist:
-    result = result + str(elem)
+    result = str(elem) + result
 print(result)
