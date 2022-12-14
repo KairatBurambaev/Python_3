@@ -1,28 +1,24 @@
 def inputK(inputK):
     while True:
         try:
-            knum = int(input(f'{inputK}'))
-            knum = list(range(knum+1))
+            knum = int(input(inputK))
             return knum
         except ValueError:
             print('Введите число!')
+
 k = inputK('Введите число: ')
-new_list = []
-new_list1 = []
-for i in k:
-    if i == k[0]:
-        new_list.append(i)
-    elif i == k[1]:
-        new_list.append(i)
-    else:
-        i = new_list[i-1] + new_list[i-2]
-        new_list.append(i)   
-for x in new_list:    
-    if new_list.index(x) % 2 !=0:
-        new_list1.append(x)
-    else:
-        x = -x
-        new_list1.append(x)
-new_list1[2] = -1
-new_list1.reverse() 
-print(new_list1 + new_list[1:])
+
+fibo = [0,1]
+
+for i in range (2, k+1):
+    fibo.append(fibo[i-1]+fibo[i-2])
+
+fibo_reverse = fibo.copy()
+for i in range(1, k+1):
+    if i % 2 == 0:
+        fibo_reverse[i] = -1 * fibo[i]
+fibo_reverse.reverse()
+
+fibo = fibo_reverse[:-1] + fibo
+
+print(fibo)

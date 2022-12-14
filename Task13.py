@@ -1,20 +1,20 @@
 def inputN(inputN):
     while True:
         try:
-            Num = int(input(f'{inputN}'))
-            return Num
+            num = int(input(inputN))
+            return num
         except ValueError:
             print('Введите целое число')
+
 N = inputN('Введите число: ')
-ist = []
+number = ''
+
 while N > 0:
     if N % 2 == 0:
-        ist.append(0)
+        number = str(0) + number
         N = N//2
     else:
-        ist.append(1)
+        number = str(1) + number
         N = N//2
-result =''
-for elem in ist:
-    result = str(elem) + result
-print(result)
+
+print(number)
